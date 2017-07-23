@@ -1,0 +1,147 @@
+a {
+  text-decoration: none;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.actions li {
+  list-style-type: none;
+}
+
+.logo {
+  color: #41bf15;
+  font-size: 34px;
+  font-family: LucidaGrande-Bold;
+
+}
+
+.stocks-list,
+.order-buttons {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.stocks-list {
+  padding: 0;
+  margin: 0;
+}
+
+.stocks-list>li:first-child .move-up,
+.stocks-list>li:last-child .move-down {
+  opacity: 0.5;
+  disabled: true;
+}
+
+.stocks-list>li:first-child .move-up {
+  opacity: 0.5;
+  disabled: true;
+}
+
+.stock-item,
+.stock-item>div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.stock-details {
+  width: 35%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.stock-details>span {
+  font-family: HelveticaNeueW01-55Roman;
+  font-size: 30px;
+  color: #59737c;
+}
+
+.stock-item {
+  justify-content: space-between;
+  align-items: center;
+  height: 118px;
+  border-top: 1px solid #e5e5e5;
+  padding-left: 40px;
+  padding-right: 36px;
+}
+
+.order-buttons button {
+  width: 25px;
+  height: 16px;
+}
+
+.stock-name {
+  font-size: 35px;
+  font-family: Avenir-Light;
+  color: #59737c;
+}
+
+.value-down{
+  background-color: #ff4f46;
+}
+
+.value-up{
+  background-color: #41bf15;
+}
+
+.toggle-btn {
+  width: 150px;
+  height: 56px;
+  border-radius: 10px;
+  border-style: none;
+  font-size: 34px;
+  font-family: Avenir-Light;
+  color: white;
+}
+
+button.move-down{
+  transform: rotate(180deg);
+}
+
+button.move-down,
+button.move-up {
+  color: #ababab;
+  border: none;
+  background: none;
+}
+
+.wrapper {
+  width: 900px;
+  height: auto;
+  background-color: #ffffff;
+  border: 20px solid lightgray;
+  margin: 0 auto;
+  align-items: center;
+}
+
+/**
+  icons
+ */
+
+.header-button {
+  border: none;
+  background: none;
+  color: #ababab;
+  width: 40px;
+  height: 40px;
+  font-size: 1.15rem;
+}
+
+.refresh {
+  transform: rotate(45deg);
+}
