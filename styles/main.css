@@ -43,7 +43,7 @@ header {
 .stocks-list>li:first-child .move-up,
 .stocks-list>li:last-child .move-down {
   opacity: 0.5;
-  disabled: true;
+  /*disabled: true;*/
 }
 
 .stocks-list>li:first-child .move-up {
