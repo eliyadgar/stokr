@@ -2,6 +2,18 @@ a {
   text-decoration: none;
 }
 
+button,
+button:focus,
+input,
+input:focus,
+select,
+select:focus {
+  outline: none;
+  border: none;
+}
+
+
+
 header {
   display: flex;
   flex-wrap: wrap;
@@ -15,6 +27,8 @@ header {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
+  align-items: center;
+
 }
 
 .actions li {
@@ -51,27 +65,10 @@ header {
   disabled: true;
 }
 
-.stock-item,
-.stock-item>div {
+.stock-item {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-}
-
-.stock-details {
-  width: 35%;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.stock-details>span {
-  font-family: HelveticaNeueW01-55Roman;
-  font-size: 30px;
-  color: #59737c;
-}
-
-.stock-item {
   justify-content: space-between;
   align-items: center;
   height: 118px;
@@ -80,16 +77,53 @@ header {
   padding-right: 36px;
 }
 
+.sign {
+  box-sizing: border-box;
+  position:relative;
+  width: 30px;
+  height: 30px;
+  box-shadow: 0 0 3px #666;
+  border-radius: 50%;
+}
+
+.no-entry {
+  background-color: red;
+}
+
+
+
+.stock-name {
+  font-size: 1.5rem;
+  font-family: Avenir-Light;
+  color: #59737c;
+}
+
+.stock-details {
+  width: 40%;
+  text-align: right;
+}
+
+.stock-details>* {
+  vertical-align: middle;
+}
+
+.stock-details>span {
+  font-family: HelveticaNeueW01-55Roman;
+  font-size: 30px;
+  color: #59737c;
+}
+
+.order-buttons {
+  display: inline-block;
+}
+
 .order-buttons button {
+  padding: 0;
+  display: block;
   width: 25px;
   height: 16px;
 }
 
-.stock-name {
-  font-size: 35px;
-  font-family: Avenir-Light;
-  color: #59737c;
-}
 
 .value-down{
   background-color: #ff4f46;
@@ -107,17 +141,20 @@ header {
   font-size: 34px;
   font-family: Avenir-Light;
   color: white;
+  margin: 0 5%;
 }
 
 button.move-down{
-  transform: rotate(180deg);
+  transform: scale(1, -1);
 }
 
 button.move-down,
 button.move-up {
   color: #ababab;
-  border: none;
   background: none;
+  font-size: 1.1rem;
+  text-align: center;
+
 }
 
 .wrapper {
@@ -133,7 +170,8 @@ button.move-up {
   icons
  */
 
-.header-button {
+.header-button,
+.search {
   border: none;
   background: none;
   color: #ababab;
@@ -142,6 +180,81 @@ button.move-up {
   font-size: 1.15rem;
 }
 
+.selected {
+  color: #41bf15;
+}
+
 .refresh {
   transform: rotate(45deg);
+}
+
+/*********************************/
+
+form label {
+  color: #59737c;
+  font-size: 1.4rem;
+}
+
+form {
+  display: flex;
+  height: 160px;
+  align-items: center;
+
+  border-top: 1px solid #e5e5e5;
+}
+
+#submit {
+  width: 100px;
+  height: 100px;
+  background: #41bf15;
+  border-radius: 50px;
+  margin: 20%;
+  color: white;
+  font-size: 1.6rem;
+}
+
+.submit-wrapper {
+  width: 20%;
+  height: 100%;
+}
+
+
+.input-fields {
+  flex-direction: column;
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  height: 100%;
+}
+
+.input-fields>div {
+  height: 50%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 30px;
+}
+
+select {
+  width: 60%;
+  height: 45%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+.input-fields input {
+  width: 55%;
+  height: 45%;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+}
+
+/***********************************search view*****************************************/
+.search-results{
+  min-height: 600px;
+  border: 1px solid red;
+}
+
+.search-header {
+  height: 100px;
 }
